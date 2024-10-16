@@ -21,7 +21,17 @@ public class WordChecker {
      * Postcondition: wordList is unchanged.
      */
     public boolean isWordChain() {
-        /* to be implemented in part (a) */ }
+        boolean wordChain = true;
+        for (int i = 1; i < wordList.size(); i++) {
+            String after = wordList.get(i);
+            String before = wordList.get(i - 1);
+            if (after.indexOf(before) < 0) {
+                wordChain = false;
+            }
+        }
+        return wordChain;
+
+    }
 
     /**
      * Returns an ArrayList<String> based on strings from wordList that start
@@ -33,5 +43,16 @@ public class WordChecker {
      * wordList.
      */
     public ArrayList<String> createList(String target) {
-        /* to be implemented in part (b) */ }
+        ArrayList<String> list = new ArrayList<String>();
+        for (String s : wordList) {
+            if (s.indexOf(target) == 0) {
+                list.add(s.substring(target.length()));
+
+            } else {
+                list.remove(s);
+            }
+
+            /* to be implemented in part (b) */ }
+        return list;
+    }
 }
