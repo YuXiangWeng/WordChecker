@@ -1,8 +1,8 @@
 import java.util.ArrayList;
-
-public class Main {
-    public static void main(String[] args) {
-        WordChecker w = new WordChecker();
+public class Main
+{
+    public static void main(String[] args)
+    {
         ArrayList<String> words = new ArrayList<String>();
         words.add("an");
         words.add("band");
@@ -12,24 +12,26 @@ public class Main {
         WordChecker x = new WordChecker(words);
         System.out.println(x.isWordChain());
 
-        WordChecker y = new WordChecker();
-        ArrayList<String> word3 = new ArrayList<String>();
-        word3.add("to");
-        word3.add("too");
-        word3.add("stool");
-        word3.add("tools");
-        System.out.println(word3);
-        WordChecker word4 = new WordChecker(word3);
-        System.out.println(word4.isWordChain());
+        ArrayList<String> words2 = new ArrayList<String>();
+        words2.add("to");
+        words2.add("too");
+        words2.add("stool");
+        words2.add("tools");
+        System.out.println(words2);
+        WordChecker w = new WordChecker(words2);
+        System.out.println(w.isWordChain());
 
-        WordChecker d = new WordChecker();
-        ArrayList c = new ArrayList<String>();
-        c.add("catch");
-        c.add("bobcat");
-        c.add("catchacat");
-        c.add("cat");
-        c.add("at");
-        System.out.println(c);
-
+        ArrayList<String> words3 = new ArrayList<String>();
+        words3.add("catch");
+        words3.add("bobcat");
+        words3.add("catchacat");
+        words3.add("cat");
+        words3.add("at");
+        System.out.println(words3);
+        WordChecker y = new WordChecker(words3);
+        System.out.println(y.createList("cat"));
+        System.out.println(y.createList("catch"));
+        System.out.println(y.createList("dog"));
     }
+
 }
